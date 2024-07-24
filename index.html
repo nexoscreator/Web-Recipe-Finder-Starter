@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Finder</title>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Recipe Finder</h1>
+    <form id="search-form">
+      <input type="text" id="search-input" placeholder="Search for recipes...">
+      <button type="submit">Search</button>
+    </form>
+  </header>
+
+  <main>
+    <!-- Recipe cards will be dynamically added here -->
+    <div id="loading" style="display: none;">
+      <div id="progress-bar-container">
+        <div id="progress-bar"></div>
+      </div>
+    </div>
+    <div id="recipe-results">
+      <div class="finder">
+        <img srcset="./assets/img/undraw_the_search_s0xf.svg" src="./assets/img/undraw_the_search_s0xf.svg" alt="the_search">
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
