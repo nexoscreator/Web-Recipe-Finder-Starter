@@ -13,8 +13,29 @@ async function fetchRecipes(ingredients) {
     return data;
   }
   catch (error) {
+    let errorMessage = 'An unexpected error occurred.';
+    if (error.message) {
+      errorMessage = error.message;
+    } else if (error.response && error.response.status) {
+      switch (error.response.status) {
+        case 400:
+          errorMessage = 'Bad request. Please check your input.';
+          break;
+        case 401:
+          errorMessage = 'Unauthorized. Please check your API key.';
+          break;
+        case 404:
+          errorMessage = 'Recipes not found. Please try different ingredients.';
+          break;
+        case 500:
+          errorMessage = 'Server error. Please try again later.';
+          break;
+        default:
+          errorMessage = 'Something went wrong. Please try again.';
+      }
+    }
     console.error('Error fetching recipes:', error);
-    alert(error.message);
+    alert(errorMessage);
     return null;
   }
 }
@@ -57,7 +78,8 @@ function displayRecipes(recipes) {
       recipeContainer.appendChild(recipeCard);
     });
   } else {
-    recipeContainer.textContent = 'No recipes found';
+    feedbackMessage.textContent = 'No recipes found. Please try different ingredients.';
+    recipeContainer.appendChild(feedbackMessage);
   }
 }
 

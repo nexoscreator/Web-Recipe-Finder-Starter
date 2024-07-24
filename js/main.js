@@ -56,3 +56,6 @@ function handleFormSubmit() {
 }
 
 handleFormSubmit();
+feedbackMessage.textContent = 'No recipes found. Please try different ingredients.';
+recipeContainer.appendChild(feedbackMessage);
+}
