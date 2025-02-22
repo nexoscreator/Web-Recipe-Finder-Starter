@@ -5,7 +5,7 @@
   --primary: #F6B100;
   --secondory: #181A20;
 
-  --silver: #9F9F9F9;
+  --silver: #9F9F9F;
   --gray: #EEEEEE;
   --smoke: #F5F5F5;
   --red: #FF0B0B;
@@ -108,7 +108,7 @@ main {
   font-size: 20px;
   margin: 0 0 10px;
   color: var(--secondory);
-  text-style: dish headings;
+  text-decoration-style: dish headings;
 }
 
 .recipe-card img {
