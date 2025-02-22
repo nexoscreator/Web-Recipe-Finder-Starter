@@ -1,3 +1,4 @@
+- chore: release 0.3.5 (#2)
 # 📜 Changelog
 
 All notable changes to this project will be documented in this file.  
