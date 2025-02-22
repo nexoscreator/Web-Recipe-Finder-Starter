@@ -1,3 +1,4 @@
+- Fix: major issue (#3)
 - chore: release 0.3.5 (#2)
 # 📜 Changelog
 
