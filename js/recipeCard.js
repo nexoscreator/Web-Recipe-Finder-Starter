@@ -2,7 +2,7 @@
 import { config } from '../api/config.js';
 
 // Fetch recipe details and populate the page
-window.onload = function() {
+window.onload = function () {
   const urlParams = new URLSearchParams(window.location.search);
   const recipeId = urlParams.get('id');
   fetchRecipeDetails(recipeId);
